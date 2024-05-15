@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot Starter Web for building web applications
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Data JPA for database interaction
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // MySQL Connector for MySQL database connection
+    implementation 'mysql:mysql-connector-java:8.0.32'
+
+    // Spring Boot Starter Cache for caching support
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+    // Spring Boot Starter Data Redis for Redis support
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // Lombok for reducing boilerplate code (Getters, Setters, Constructors, etc.)
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Spring Boot Starter Test for testing support
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
